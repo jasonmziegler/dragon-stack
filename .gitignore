@@ -1,1 +1,5 @@
 node_modules/
+package-lock.json
+_cacache/
+anonymous-cli-metrics.json
+index-v5/
