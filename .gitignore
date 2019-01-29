@@ -3,3 +3,6 @@ package-lock.json
 _cacache/
 anonymous-cli-metrics.json
 index-v5/
+secrets/
+_logs/
+_locks/
