@@ -5,8 +5,12 @@ class TraitTable {
         return new Promise((resolve, reject) => {
             pool.query(
                 'SELECT id FROM trait WHERE "traitType" = $1 AND "traitValue" = $2',
-                [traitType, traitValue],
+                [traitType.traitType, traitType.traitValue],
                 (error, response) => {
+                    console.log('TraitType',traitType);
+                    console.log('TraitValue', traitValue);
+                    console.log(response);
+
                     if (error) return reject(error);
 
                     resolve({ traitId: response.rows[0].id });
@@ -17,9 +21,9 @@ class TraitTable {
 }
 
 
-TraitTable.getTraitId({traitType: 'backgroundColor', traitValue: 'green'})
+/*TraitTable.getTraitId({traitType: 'backgroundColor', traitValue: 'green'})
 .then(({ traitId }) => console.log('traitId',traitId))
-.catch(error => console.error('error', error));
+.catch(error => console.error('error', error));*/
 
 module.exports = TraitTable;
 
