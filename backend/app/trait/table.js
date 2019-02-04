@@ -7,9 +7,9 @@ class TraitTable {
                 'SELECT id FROM trait WHERE "traitType" = $1 AND "traitValue" = $2',
                 [traitType.traitType, traitType.traitValue],
                 (error, response) => {
-                    console.log('TraitType',traitType);
-                    console.log('TraitValue', traitValue);
-                    console.log(response);
+                    //console.log('TraitType',traitType);
+                    //console.log('TraitValue', traitValue);
+                    //console.log(response);
 
                     if (error) return reject(error);
 
