@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import Root from './components/Root';
-
+import { fetchAuthenticated } from './actions/account';
 //import { generationActionCreator } from './actions/generation';
 
 import './index.css';
@@ -24,9 +24,12 @@ const store = createStore(
 //     store.dispatch(generationActionCreator(json.generation))
 // });
 
-ReactDOM.render(
-    <Provider store={store}>
-        <Root />
-    </Provider>,
-     document.getElementById('root'));
+store.dispatch(fetchAuthenticated())
+.then(() => {
+    ReactDOM.render(
+        <Provider store={store}>
+            <Root />
+        </Provider>,
+         document.getElementById('root'));   
+});
 
