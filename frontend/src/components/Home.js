@@ -18,4 +18,10 @@ class Home extends React.Component {
     }
 }
 
+fetch('http://localhost:3000/account/dragons', {
+    credentials: 'include'
+})
+.then(response => response.json())
+.then(json => console.log('account dragons', json));
+
 export default connect(null, { logout })(Home);
