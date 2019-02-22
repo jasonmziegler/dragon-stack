@@ -8,13 +8,13 @@ const accountDragons = (state = DEFAULT_ACCOUNT_DRAGONS, actions) => {
         case ACCOUNT_DRAGONS.FETCH:
             return {...state, status: fetchStates.fetching};
         case ACCOUNT_DRAGONS.FETCH_ERROR:
-            return {...state, status: fetchStates.error, message: action.message };
+            return {...state, status: fetchStates.error, message: actions.message };
         case ACCOUNT_DRAGONS.FETCH_SUCCESS:
             return {
                 ...state,
                 status: fetchStates.success,
-                message: action.message,
-                dragons: action.dragons
+                message: actions.message,
+                dragons: actions.dragons
             };
         default:
             return state;
