@@ -1,4 +1,4 @@
-import { ACCOUNT_INFO } from '../actions/typs';
+import { ACCOUNT_INFO } from '../actions/types';
 import fetchStates from './fetchState';
 
 const accountInfo = (state = {}, action) => {
