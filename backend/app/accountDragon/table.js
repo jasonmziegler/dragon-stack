@@ -62,9 +62,9 @@ class AccountDragonTable {
 // .then(({ accountId }) => console.log('accountId', accountId))
 // .catch(error => console.error('error',error));
 
-AccountDragonTable.updateDragonAccount({ dragonId: 4, accountId: 1})
-.then(() => console.log('success'))
-.catch(error => console.log('error', error));
+// AccountDragonTable.updateDragonAccount({ dragonId: 4, accountId: 1})
+// .then(() => console.log('success'))
+// .catch(error => console.log('error', error));
 
 // AccountDragonTable.getAccountDragons({ accountId: 2})
 // .then(({ accountDragons }) => console.log('accountDragons', accountDragons))
